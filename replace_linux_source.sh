@@ -21,11 +21,9 @@ function replace_source_list_on_ubuntu()
 {
     version=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
     if [ ${version} == "DISTRIB_RELEASE=16.04" ]; then
-        mv /etc/apt/source.list /etc/apt/source.list.bak
-        
-    
+        mv /etc/apt/sources.list /etc/apt/sources.list.bak
+        wget https://raw.githubusercontent.com/yujmo/envInit/master/ubuntu_16.04.list -O /etc/apt/sources.list       
     fi
-
 
 }
 
