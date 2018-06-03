@@ -49,6 +49,7 @@ function main()
     else
         echo "not support platform type: "${type}
     fi    
+    curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -  
 }
 
 main
